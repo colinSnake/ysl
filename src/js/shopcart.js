@@ -1,7 +1,7 @@
 // 购物车页面业务逻辑
 require(["./requirejs.config"],() => {
     // 引入shopcart需要依赖的模块
-    require(["jquery","footer","cartheader","cookie",],() => {
+    require(["jquery","footer","cartheader","cookie"],() => {
         // 购物车
         // 获取cookie，渲染生成商品
         let arr = JSON.parse($.cookie("cart"));
@@ -9,7 +9,7 @@ require(["./requirejs.config"],() => {
         console.log(typeof $.cookie("cart"));
         let productout = $("#product-out"),
             product = $("#product");
-        var str = "";
+        let str = "";
         // 拼接出商品
         for(var value of arr){
             str += `
@@ -109,6 +109,7 @@ require(["./requirejs.config"],() => {
                 $(this).attr("data-allCheck",1);
                 aCheck.attr("data-check",1)
                 eachPrice();
+                order();
             }
         })
 
@@ -123,12 +124,14 @@ require(["./requirejs.config"],() => {
                 $(this).attr("data-check",0);
                 n--;
                 eachPrice();
+                order();
             }else{
                 $(this).removeClass("ac");
                 $("#allCheck").removeClass("al");
                 $(this).attr("data-check",1);
                 n++;
                 eachPrice();
+                order();
             }
             if(n !== $(".check").length){
                 $("#allCheck").attr("data-check",0);
@@ -171,15 +174,26 @@ require(["./requirejs.config"],() => {
             $(this).css({background : "#000",color : "#fff"});
         })
 
+        // 生成订单cookie
+        function order(){
+            let orderArr = JSON.parse($.cookie("cart"));
+            for(let i = 0; i < $(".check").length; i++){
+                if(!parseInt($(".check").eq(i).attr("data-check"))){
+                    orderArr.splice(i,1);
+                    console.log(orderArr);
+                }
+            }
+            $.cookie("order",JSON.stringify(orderArr),{path: "/",expires: 3});
+        }
         // 结算功能
         // 思路：重新生成一个订单cookie用来存放截取的商品对象（交付给订单页的数据），订单页完成结算，清除订单的cookie
         $("#immediate-settlement").on("click",function(){
             if($.cookie("user")){
                 if(confirm("确定下单吗？")){
-                    alert("结算完成");
-                    $.cookie("cart","",{path: "/",expires: -1});// 清除购物车cookie
-                    $(".cart").css({display : "none"});
-                    $(".emptycart").css({display : "block"});
+                    order();
+                    setTimeout(() => {
+                        window.location.href = "/html/order.html";
+                    },1000)
                 }
             }else{
                 alert("请到登录页面登录");
