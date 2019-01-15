@@ -1,0 +1,186 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+main{
+    width: 100%;
+    height: 700px;
+    .main_wrap{
+        width: 1280px;
+        height: 620px;
+        margin: 0 auto;
+        h4{
+            width: 1280px;
+            height: 54px;
+            line-height: 54px;   
+            font-size: 12px;
+            float: left;
+            a{
+                color: #c5c5c5;
+                margin: 0 2px;
+            }
+        }
+        .wrap{
+            width: 1280px;
+            height: 560px;
+            .wrap_left{
+                width: 768px;
+                height: 600px;
+                float: left;
+                p{
+                    width: 72px;
+                    float: left;
+                    margin-right: 100px; 
+                    span{
+                        float: left;
+                        width: 70px;
+                        height: 70px;
+                        border: 1px solid #e0e0e0;
+                        img{
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                    span:nth-of-type(1){
+                        margin-top: 30px;
+                        margin-bottom: 10px; 
+                    }
+                    .ac{
+                        border: 1px solid #000;
+                    }
+                }
+                >span{
+                    width: 31px;
+                    height: 26px;
+                    float: right;
+                    img{
+                        width: 31px;
+                        height: 26px; 
+                    }
+                }
+            }
+            .wrap_right{
+                width: 462px;
+                height: 370px;
+                float: right; 
+                padding-left: 50px; 
+                h2{
+                    height: 15px;
+                    line-height: 15px;
+                    font-size: 15px; 
+                    font-weight: normal;
+                    margin-bottom: 12px;
+                }
+                h1{
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 24px;
+                    font-weight: normal;
+                    margin-bottom: 16px; 
+                }
+                >p{
+                    width: 170px;
+                    height: 13px;
+                    line-height: 13px;
+                    font-size: 13px;
+                    background: url(/static/images/star.png) no-repeat left center;
+                    a{
+                        float: right;
+                        color: #000;
+                        text-decoration: underline;
+                    } 
+                }
+                .top{
+                    width: 404px;
+                    height: 63px;
+                    margin-top: 35px; 
+                    p{
+                        width: 200px;
+                        height: 63px;
+                        float: left;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        font-size: 13px;
+                        b{
+                            color: #ff0000;
+                        }
+                        span{
+                            color: #999;
+                        }
+                    }
+                    a{
+                        float: left;
+                        font-size: 13px;
+                        text-decoration: underline;
+                        margin-top: 43px;
+                        color: #000; 
+                        margin-left: 70px; 
+                    }
+                }
+                .middle{
+                    width: 94px;
+                    height: 59px;
+                    border: 2px solid #000;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 15px;  
+                    font-size: 13px;
+                    margin-top: 30px; 
+                    margin-bottom: 40px; 
+                    span{
+                        font-size: 12px;
+                        color: #999;
+                        margin-top: 3px; 
+                    }
+                }
+                .bottom{
+                    width: 424px;
+                    height: 45px;
+                    p{
+                        width: 126px;
+                        height: 45px;
+                        border: 1px solid #dadada;
+                        float: left;
+                        background-color: #f2f2f2;
+                        span{
+                            float: left;
+                            width: 42px;
+                            height: 45px;
+                            text-align: center;
+                            line-height: 45px;
+                            font-size: 15px;
+                            cursor: pointer;
+                        }
+                    }
+                    p:nth-of-type(2){
+                        width: 282px;
+                        height: 45px;
+                        float: right;
+                        a{
+                            float: left;
+                            width: 141px;
+                            height: 45px;
+                            background-color: #232323;
+                            color: #fff;
+                            font-size: 12px;
+                            line-height: 45px;
+                            text-align: center;
+                        }
+                        span{
+                            float: left;
+                            width: 141px;
+                            height: 45px;
+                            background-color: #000;
+                            color: #fff;
+                            font-size: 12px;
+                            line-height: 45px;
+                            text-align: center;
+                        }
+                    }    
+                }
+            }
+        } 
+    }
+}

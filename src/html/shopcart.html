@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页面</title>
+    <link rel="shortcut icon" href="https://res.yslbeautycn.com/favicon.ico">
+    <link rel="stylesheet" href="/css/shopcart.css">
+</head>
+<body>
+    <header></header>
+    <div class="emptycart">
+        <div class="main_wrap">
+            <p><a href="/index.html">&lt; 继续购物</a></p>
+            <div class="wrap">
+                <div class="wrap_left">
+                    <div class="top">
+                        <h2>您的购物袋是空的</h2>
+                        <p>您还没有添加任何商品，马上挑选喜欢的商品。</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom_left">
+                            <p>
+                                <a href="#">寻觅灵感？</a>
+                                <a href="#">立即购买您最喜爱的产品</a>
+                            </p>
+                        </div>
+                        <div class="bottom_right">
+                            <p>
+                                <a href="#">想要找到完美的礼物？</a>
+                                <a href="#">挑选最合适TA的精美礼物</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_right">
+                    <h3>安全支付保障</h3>
+                    <p>如有任何问题，请联系我们</p>
+                    <p>
+                        <a href="#"><img src="/static/images/c_yl.png"></a>
+                        <a href="#"><img src="/static/images/c_zfb.png"></a>
+                        <a href="#"><img src="/static/images/c_wx.png"></a>
+                    </p>
+                    <h3>全国配送</h3>
+                    <p>购买满400元免运费</p>
+                    <p>快递可至全国各地</p>
+                    <p>快递2至6日正常送达全国</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart">
+        <div class="main_wrap">
+            <p><a href="/index.html">&lt; 继续购物</a></p>
+            <h2>购物袋（<span class="cartNum">0</span>）</h2>
+            <div class="wrap">
+                <div class="wrap_left" id="product">
+                    <div class="top">
+                        <span><a href="javascript:;" id="allCheck" data-allCheck="1"></a></span>
+                        <span>全选</span>
+                        <span>商品信息</span>
+                        <span>单价</span>
+                        <span>数量</span>
+                        <span>总计</span>
+                    </div>
+                    <div class="middle_out" id="product-out">
+                        <!-- <div class="middle">
+                            <span><a href="#" id="check"></a></span>
+                            <a href="./detail.html"><img src="/static/images/c_p1.jpg"></a>
+                            <p>
+                                <span>黑金诱惑节日限量奥飘茗香水</span>
+                                <span>50ml</span>
+                                <a href="#" id="deleteBtn">删除</a>
+                            </p>
+                            <span id="price">￥1090</span>
+                            <p>
+                                <span id="addBtn">-</span>
+                                <span id="num">1</span>
+                                <span id="redBtn">+</span>
+                            </p>
+                            <span id="sum">￥1090</span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="wrap_right">
+                   <div class="right_top">
+                        <h3>订单总结</h3>
+                        <a href="javascript:;" id="immediate-settlement">立即结算</a>
+                        <p><span>优惠价格</span><span>￥0</span></p>
+                        <p><span>运费</span><span>￥0</span></p>
+                        <p><span>总价</span><span class="money">￥0</span></p>
+                    </div>
+                    <div class="right_bottom">
+                        <h3>客户服务</h3>
+                        <p>如果有任何问题，请联系我们</p>
+                        <p><span><img src="/static/images/tel.png"></span><strong>400-820-6362</strong></p>
+                        <p>联系客服下单 惊喜送礼</p>
+                        <a href="javascript:;" id="online-consultation">在线咨询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script type="text/javascript" src="/libs/require/require.js" data-main="/js/shopcart.js"></script>
+</body>
+</html>

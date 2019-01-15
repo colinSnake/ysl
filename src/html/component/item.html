@@ -1,0 +1,13 @@
+<!-- 模板引擎 -->
+<script type="text/html" id="list-template">
+        {{each list item i}}
+        <dl>
+            <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a></dt>
+            <dd>
+                <a href="/html/detail.html?id={{ item.id }}">{{ item.style }}</a>
+                <a href="/html/detail.html?id={{ item.id }}">{{ item.title }}</a>
+                <p>{{ item.price }}</p>
+            </dd>
+        </dl>
+        {{/each}}
+</script>

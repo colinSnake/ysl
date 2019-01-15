@@ -1,0 +1,39 @@
+<script type="text/html" id="plate-template">
+    {{ each list item i}}
+    <div class="wrap_top">
+        <div class="top">
+            <dl>
+                <dt><a href="#">女士香水</a></dt>
+                <dd><a href="#">反转巴黎香水</a></dd>
+                <dd><a href="#">鸦片香水</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">男士香水</a></dt>
+                <dd><a href="#">天之骄子男士香水</a></dd>
+                <dd><a href="#">暗夜男士香水</a></dd>
+                <dd><a href="#">Y男士香水</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="wrap_bottom">
+        <div class="bottom">
+            <dl>
+                <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a></dt>
+                <dd>
+                    <a href="#">黑金限量反转巴黎香水</a>
+                    <a href="#">沉迷神秘爱恋</a>
+                    <a href="#">了解详情</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img1 }}"></a></dt>
+                <dd>
+                    <a href="#">黑金限量黑鸦片香水</a>
+                    <a href="#">释放深邃神秘气息</a>
+                    <a href="#">了解详情</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    {{ /each }}
+</script>

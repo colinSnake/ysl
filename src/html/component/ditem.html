@@ -1,0 +1,12 @@
+<script type="text/html" id="discover-template">
+    {{each list item i}}
+    <dl>
+        <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a></dt>
+        <dd>
+            <a href="/html/detail.html?id={{ item.id }}">{{ item.title }}</a>
+            <span>{{ item.pargph }}</span>
+            <a href="/html/detail.html?id={{ item.id }}">{{ item.more }}</a>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

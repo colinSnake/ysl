@@ -1,0 +1,49 @@
+.yours_bottom{
+    width: 1263px;
+    height: 397px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    dl{
+        width: 620px;
+        height: 397px;
+        background-color: #fff;
+        dt{
+            float: left;
+            img{
+                width: 315px;
+                height: 397px;
+                display: block;
+            }
+        }
+        dd{
+            width: 215px;
+            height: 292px;
+            float: left;
+            padding: 105px 45px 0 45px;
+            strong{
+                float: left;
+                font-size: 16px;
+                height: 16px;
+                line-height: 16px;
+                margin-bottom: 8px; 
+            }
+            a{
+                color: #000;
+                float: left;
+                height: 14px;
+                line-height: 14px;
+                font-size: 14px;
+                text-decoration: underline;
+                margin-top: 72px; 
+            }
+            span{
+                float: left;
+                height: 14px;
+                line-height: 14px;
+                font-size: 14px;
+                margin-top: 21px; 
+            }
+        }
+    }
+}
