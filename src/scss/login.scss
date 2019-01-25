@@ -55,8 +55,9 @@ main{
                     margin-bottom: 12px;
                 }
                 label{
-                    width: 430px;
-                    height: 78px;
+                    display: block;
+                    width: 362px;
+                    height: 100px;
                     font-size: 14px;
                     b{
                         color: red;
@@ -65,14 +66,14 @@ main{
                         width: 350px;
                         height: 50px;
                         border: 1px solid #999;
-                        margin-bottom: 12px; 
                         background-color: #e8f0fe;
                         padding-left: 10px; 
-                        margin-bottom: 25px;  
                     }
                     span{
-                        display: none;
                         color: red;
+                    }
+                    .hidden{
+                        display: none;
                     }
                 }
                 p:nth-of-type(1){

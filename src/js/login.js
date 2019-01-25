@@ -2,36 +2,43 @@
 require(["./requirejs.config"],() => {
     // 引入login需要依赖的模块
     require(["url","jquery","header","footer","cookie"],(url) => {
-        let username = $("#username"),
-            password = $("#pwd"),
-            aInput = $("input");
-            
-        let flag = false;// 验证输入框不能为空
-
         let check = false;// 判断cookie存放日期
-        aInput.on("blur",function(){
-            if(username.val() !== "" && password.val() !== 0){
-                $("#sign-in").addClass("flag");
-                flag = true;
-            }
-        });
         
         $("#choose").on("click",() =>{
             // 点击了存3天
             $("#checked").css({background : "#000"});
             check = true;
         })
+
+        // 表单验证
+        $(".form-login").on("blur","input",function(){
+            if($(this).attr("name") === "username"){
+                if($(this).val() === ""){
+                    $(".error-username").removeClass("hidden").text("用户名不能为空"); 
+                }else{
+                    $(".error-username").addClass("hidden");
+                    $(".form-login input").attr("data-flag","1"); 
+                }
+            }else if($(this).attr("name") === "pwd"){
+                if($(this).val() === ""){
+                    $(".error-pwd").removeClass("hidden").text("登录密码不能为空"); 
+                }else{
+                    $(".error-pwd").addClass("hidden");
+                    $(".form-login input").attr("data-flag","1"); 
+                }
+            }
+        });
         // 点击事件
         $("#sign-in").on("click",function(){
             // ajax请求数据库
-            if(flag){
+            if(parseInt($(".form-login input").attr("data-flag"))){
                 $.ajax({
                     url : url.baseUrlPhp + "v1/login.php",
                     type : "post",
                     dataType : "json",
                     data : {
-                        username : username.val(),
-                        password : password.val(),
+                        username : $("#username").val(),
+                        password : $("#pwd").val(),
                     },
                     success : function(res){
                         if(res.res_code){
@@ -53,6 +60,8 @@ require(["./requirejs.config"],() => {
                         }
                     },
                 })
+            }else{
+                alert("不能有为空项");
             }
         })
 

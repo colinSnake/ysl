@@ -14,25 +14,25 @@
         <div class="main_wrap">
             <h4><a href="../index.html">首页</a>&gt;<span>我的账户</span></h4>
             <section>
-                <form>
+                <form class="form-register">
                     <h1>我已是注册用户，前往<a href="../html/login.html">登录</a></h1>
                     <p><span>或</span></p>
                     <h2>新用户注册</h2>
                     <label for="tel">您的手机 <b>*</b>
-                        <input type="tel" id="tel" placeholder="请输入有效的手机号码">
-                        <span class="error0">请输入有效的手机号码</span>
+                        <input type="tel" id="tel" name="tel" data-flag="0" placeholder="请输入有效的手机号码">
+                        <span class="error-tel hidden"></span>
                     </label>
                     <label for="username">您的用户名 <b>*</b>
-                        <input type="text" id="username" placeholder="请输入用户名">
-                        <span class="error1">用户名只能是数字字母和下划线组成</span>
+                        <input type="text" id="username" name="username" data-flag="0" placeholder="请输入用户名">
+                        <span class="error-username hidden"></span>
                     </label>
                     <label for="pwd">密码 <b>*</b>
-                        <input type="password" id="pwd" placeholder="请输入密码">
-                        <span class="error2">密码必须大于8位</span>
+                        <input type="password" id="pwd" name="pwd" data-flag="0" placeholder="请输入密码">
+                        <span class="error-pwd hidden"></span>
                     </label>
                     <label for="msPwd">确认密码 <b>*</b>
-                        <input type="password" id="msPwd" placeholder="请再次输入密码">
-                        <span class="error3">两次密码不一致</span>
+                        <input type="password" id="msPwd" name="msPwd" data-flag="0" placeholder="请再次输入密码">
+                        <span class="error-msPwd hidden"></span>
                     </label>
                     <p><span id="choose"><a href="javascript:;" id="checked"></a></span><b>我同意当前</b><a href="javascript:;">注册协议</a></p>
                     <a href="javascript:;" id="register-btn">同意协议并注册</a>
