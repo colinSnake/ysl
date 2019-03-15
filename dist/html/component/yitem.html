@@ -1,0 +1,11 @@
+<script type="text/html" id="yours-template">{{each list item i}}
+    <dl>
+        <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a></dt>
+        <dd>
+            <strong>{{ item.about }}</strong>
+            <strong>{{ item.title }}</strong>
+            <span>{{ item.pargph }}</span>
+            <a href="/html/detail.html?id={{ item.id }}">{{ item.more }}</a>
+        </dd>
+    </dl>
+    {{/each}}</script>

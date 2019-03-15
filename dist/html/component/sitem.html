@@ -1,0 +1,33 @@
+<script type="text/html" id="star-template">{{ each list item i }}
+    <div class="bottom_left">
+            <a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img }}"></a>
+    </div>
+    <div class="bottom_right">
+        <dl>
+            <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img1 }}"></a></dt>
+            <dd>
+                <a href="javascript:;">{{ item.title }}</a>
+                <a href="javascript:;">4大明星色号 大胆出击</a>
+                <p>￥{{ item.price }}</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img2 }}"></a></dt>
+            <dd>
+                <a href="javascript:;">{{ item.title1 }}</a>
+                <a href="javascript:;">10大个性新色 纵情释爱</a>
+                <p>￥{{ item.price1 }}</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="/html/detail.html?id={{ item.id }}"><img src="{{ item.img3 }}"></a></dt>
+            <dd>
+                <a href="javascript:;">{{ item.title2 }}</a>
+                <a href="javascript:;">高定设计，黑金对峙</a>
+                <p>￥{{ item.price2 }}</p>
+            </dd>
+        </dl>
+        <span></span>
+        <span></span>
+    </div>
+    {{ /each }}</script>

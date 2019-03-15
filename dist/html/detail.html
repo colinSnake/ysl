@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>商品详情页面</title><link rel="shortcut icon" href="https://res.yslbeautycn.com/favicon.ico"><link rel="stylesheet" href="/css/detail.css"></head><body><header></header><main><div class="main_wrap"><h4><a href="../index.html">首页</a> &gt; <a href="../html/list.html">香水</a> &gt; <a href="#">女士香水</a> &gt; <a href="#">鸦片香水</a> &gt; <a href="#">黑金诱惑节日限量奥飘茗香水</a></h4><div class="wrap" id="detail-item"><script type="text/html" id="detail-template">{{each list item i}}
+                    <div class="wrap_left">
+                        <p>
+                            <span id="detail-img1" class="ac"><img src="{{ item.img1 }}"></span>
+                            <span id="detail-img2"><img src="{{ item.img2 }}"></span>
+                        </p>
+                        <a href="javascript:;"><img src="{{ item.img3 }}" id="pic"></a>
+                        <span><img src="{{ item.img4 }}"></span>
+                        </div>
+                        <div class="wrap_right">
+                        <h2>{{ item.style }}</h2>
+                        <h1 id="title">{{ item.title }}</h1>
+                        <p><a href="#">添加你的评论</a></p>
+                        <div class="top">
+                            <p>
+                                <b>{{ item.num }} </b>
+                                <span>黑金诱惑，释放神秘气息</span>
+                                <span>咖啡花香调香水，找到你的瘾</span>
+                            </p>
+                            <a href="#">查看详情</a>
+                        </div>
+                        <div class="middle">
+                            <b id="ml">50ml</b>
+                            <span>￥{{ item.price }}</span>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <span id="redBtn">-</span>
+                                <span id="num">1</span>
+                                <span id="addBtn">+</span>
+                            </p>
+                            <p>
+                                <span id="price">￥{{ item.price }}</span>
+                                <a href="javascript:;" id="addCart">加入购物袋</a>
+                            </p>
+                        </div>
+                    </div>
+                {{/each}}</script></div></div></main><footer></footer><script src="/libs/require/require.js" data-main="/js/detail.js"></script></body></html>

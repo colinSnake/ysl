@@ -1,0 +1,38 @@
+<script type="text/html" id="detail-template">{{each list item i}}
+    <div class="wrap_left">
+        <p>
+            <span><img src="{{ item.img1 }}"></span>
+            <span><img src="{{ item.img2 }}"></span>
+        </p>
+        <a href="#"><img src="{{ item.img3 }}" id="pic"></a>
+        <span><img src="{{ item.img4 }}"></span>
+        </div>
+        <div class="wrap_right">
+        <h2>{{ item.style }}</h2>
+        <h1 id="title">{{ item.title }}</h1>
+        <p><a href="#">添加你的评论</a></p>
+        <div class="top">
+            <p>
+                <b>{{ item.num }} </b>
+                <span>黑金诱惑，释放神秘气息</span>
+                <span>咖啡花香调香水，找到你的瘾</span>
+            </p>
+            <a href="#">查看详情</a>
+        </div>
+        <div class="middle">
+            <b id="ml">50ml</b>
+            <span>￥{{ item.price }}</span>
+        </div>
+        <div class="bottom">
+            <p>
+                <span id="redBtn">-</span>
+                <span id="num">1</span>
+                <span id="addBtn">+</span>
+            </p>
+            <p>
+                <span id="price">￥{{ item.price }}</span>
+                <a href="javascript:;" id="addCart">加入购物袋</a>
+            </p>
+        </div>
+    </div>
+{{/each}}</script>

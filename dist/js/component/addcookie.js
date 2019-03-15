@@ -1,0 +1,1 @@
+"use strict";define(["jquery"],function(){for(var o in list)console.log(list[o]);$.cookie("product",{path:"/"})});
